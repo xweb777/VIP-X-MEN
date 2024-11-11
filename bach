@@ -1,0 +1,4 @@
+/multi-page-welcome
+    /index.html      # First page (name input)
+    /welcome.html    # Second page (welcome message)
+    /styles.css      # Styling for both pages

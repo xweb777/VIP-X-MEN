@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Name</h1>
+        <form id="nameForm" action="welcome.html" method="GET">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // This script will ensure the form passes the name to the second page
+        document.getElementById('nameForm').addEventListener('submit', function(e) {
+            const nameInput = document.getElementById('name');
+            const nameValue = nameInput.value;
+
+            // If there's no name input, prevent form submission
+            if (!nameValue) {
+                e.preventDefault();
+                alert('Please enter your name');
+            }
+        });
+    </script>
+</body>
+</html>
